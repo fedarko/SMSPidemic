@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">SMSpidemic</string>
-    <string name="hello_world">THE ONLY LIMIT TO SMSPIDEMIC IS YOUR MIND.</string>
-
+	<string name="host_title">Host an Epidemic</string>
+	<string name="contact_lookup_prompt">Add a Player: </string>
+	<string name="contact_lookup_button">Search Contacts</string>
 </resources>

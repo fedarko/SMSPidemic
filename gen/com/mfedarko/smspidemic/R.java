@@ -1087,6 +1087,9 @@ containing a value of this type.
         public static final int beginning=0x7f050011;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
+        public static final int contactGetResults=0x7f05003f;
+        public static final int contactLookupButton=0x7f05003e;
+        public static final int contactLookupPrompt=0x7f05003d;
         public static final int default_activity_button=0x7f050028;
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
@@ -1097,6 +1100,7 @@ containing a value of this type.
         public static final int expanded_menu=0x7f05002c;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
+        public static final int host_title=0x7f05003c;
         public static final int icon=0x7f05002a;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
@@ -1227,7 +1231,9 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int app_name=0x7f0a000d;
-        public static final int hello_world=0x7f0a000e;
+        public static final int contact_lookup_button=0x7f0a0010;
+        public static final int contact_lookup_prompt=0x7f0a000f;
+        public static final int host_title=0x7f0a000e;
     }
     public static final class style {
         /** 

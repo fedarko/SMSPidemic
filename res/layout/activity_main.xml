@@ -5,8 +5,37 @@
     tools:context="${relativePackage}.${activityClass}" >
 
     <TextView
+        android:id="@+id/host_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/host_title"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <TextView
+        android:id="@+id/contactLookupPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/host_title"
+        android:text="@string/contact_lookup_prompt" />
+    
+    <Button
+        android:id="@+id/contactLookupButton"
+    	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/host_title"
+        android:layout_toRightOf="@+id/contactLookupPrompt"
+        android:text="@string/contact_lookup_button"
+        android:onClick="contact_lookup" />
+    
+    <TextView
+        android:id="@+id/contactGetResults"
+        android:layout_below="@+id/contactLookupButton"
+    	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="" />
+    
 </RelativeLayout>
