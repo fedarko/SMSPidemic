@@ -21,7 +21,6 @@ public class MainActivity extends Activity {
 	private int PICK_CONTACT_REQUEST = 1;
 	
 	private boolean classesAssigned = false;
-	private boolean userAdded = false;
 	private TextView results;
 	private long startTime;
 	
@@ -38,11 +37,12 @@ public class MainActivity extends Activity {
 		
 		TelephonyManager tMngr = (TelephonyManager) getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
 		String uPhone = tMngr.getLine1Number();
-		Player user = new Player("Player 1 (you)", uPhone);
-		players.add(user);
-		playerNames+=user.getName() + "@ "+user.getPhone()+"\n";
+		if (players.size() == 0) {
+			Player user = new Player("Player 1 (you)", uPhone);
+			players.add(user);
+			playerNames+=user.getName() + "@ "+user.getPhone()+"\n";
+		}
 		results.setText(playerNames);
-		userAdded = true;
 	}
 	
 	//starts the game. All players are assigned roles
