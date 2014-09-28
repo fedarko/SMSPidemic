@@ -1,0 +1,56 @@
+SMSpidemic
+==========
+
+Max Players: 25 (theoretically, unlimited, but 25 should prevent this from
+getting out-of-hand - feel free to limit the maximum further.)
+
+Min Players: 5
+
+1) User #1 ("host" - only one required to have the application installed)
+   starts a game instance.
+    A) Uses a certain number of contacts (e.g. 10 people's phone numbers)
+       as input.
+
+2) All players get a SMS text saying that the game has begun (with host-
+   provided text alongside this).
+
+3) Players are assigned statuses:
+    *10% of players begin as "doctors". 
+        -Uninfected by default.
+        -High resistance to disease; still possible to get infected, but
+         unlikely (esp. when compared to neutral players).
+        -Upon SMS contact with an incubating player, the incubating player
+         reverts to "neutral".
+
+    *60% of players begin as "neutral".
+        -Uninfected by default.
+        -Upon SMS contact with an infected player, the neutral player becomes
+         "incubating".
+
+    *30% of players begin as "infected".
+        -Notified at the start that they are infected. Their score comes from
+         infecting other people; unlike the others, their goal isn't to stay
+         alive, but to spread the epidemic as much as possible.
+        -Infected at the start.
+        -Upon SMS contact with a neutral player, the neutral player becomes
+         "incubating".
+
+    *10% of players begin as "incubating".
+        -In a sort of "middle ground". They've been given the disease, but it
+         hasn't been spread throughout their body yet.
+        -Upon SMS contact with a doctor player, the incubating player reverts
+         to "neutral".
+        -Incubating players can't infect players, and they can't get more sick.
+         They're essentially neutral, but with a time limit.
+        -If two days pass since incubation time without being cured via a
+         doctor, the player becomes "dead".
+        
+    *0% of players begin as "dead".
+        -Dead players get notifications about end-of-game notices; e.g. "[P1]
+         won the game by surviving!" or "[I1 and I2] won the game by infecting
+         [n] people."
+        -Nobody starts as being dead. Because that would be pretty silly.
+
+4) Over the course of the week (7 days or 168 hours since the host started the
+   game), people can communicate like normal via SMS.
+
