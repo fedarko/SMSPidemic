@@ -26,4 +26,9 @@ public class LauncherActivity extends Activity {
 		startActivity(i);
 		
 	}
+	
+	public void goToAboutScreen(View v){
+		Intent i = new Intent(getApplicationContext(), AboutActivity.class);
+		startActivity(i);
+	}
 }
