@@ -96,7 +96,7 @@ public class MainActivity extends Activity {
 				
 				Player p = new Player(name, phone_number);
 				players.add(p);
-				playerNames+=p+"\n";
+				playerNames+=p.getName()+"\n";
 				results.setText(playerNames);
 			//	System.out.println(p.getName()+":DELETE PHONE LATER:::"+p.getPhone());
 			}
