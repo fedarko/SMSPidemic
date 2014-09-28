@@ -3,11 +3,13 @@ package com.mfedarko.smspidemic;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
+import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,6 +21,7 @@ public class MainActivity extends Activity {
 	private int PICK_CONTACT_REQUEST = 1;
 	
 	private boolean classesAssigned = false;
+	private boolean userAdded = false;
 	private TextView results;
 	private long startTime;
 	
@@ -32,7 +35,14 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		results = (TextView) findViewById(R.id.contactGetResults);
-		// TODO add user as player: prompt user for his/her name and phone #
+		
+		TelephonyManager tMngr = (TelephonyManager) getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
+		String uPhone = tMngr.getLine1Number();
+		Player user = new Player("Player 1 (you)", uPhone);
+		players.add(user);
+		playerNames+=user.getName() + "@ "+user.getPhone()+"\n";
+		results.setText(playerNames);
+		userAdded = true;
 	}
 	
 	//starts the game. All players are assigned roles
@@ -122,7 +132,7 @@ public class MainActivity extends Activity {
 				
 				Player p = new Player(name, phone_number);
 				players.add(p);
-				playerNames+=p.getName()+"\n";
+				playerNames+=p.getName() + "@ "+p.getPhone()+"\n";
 				results.setText(playerNames);
 				Toast t = Toast.makeText(
 						getApplicationContext(),

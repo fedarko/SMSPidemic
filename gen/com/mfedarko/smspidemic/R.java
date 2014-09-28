@@ -34,23 +34,31 @@ public final class R {
         public static final int activity_main=0x7f030003;
     }
     public static final class string {
-        public static final int aboutButton=0x7f04000d;
-        public static final int about_text=0x7f040010;
-        public static final int about_title=0x7f04000f;
-        public static final int action_settings=0x7f040007;
+        public static final int aboutButton=0x7f04000e;
+        public static final int about_text=0x7f040017;
+        public static final int about_title=0x7f040010;
+        public static final int action_settings=0x7f040008;
+        public static final int addUserTitle=0x7f040012;
+        public static final int add_user_button=0x7f040011;
         public static final int app_name=0x7f040000;
         public static final int contact_lookup_button=0x7f040003;
         public static final int contact_lookup_prompt=0x7f040002;
-        public static final int gameStatusButton=0x7f04000a;
-        public static final int game_status=0x7f04000c;
-        public static final int hello_world=0x7f040006;
+        public static final int contact_remove_button=0x7f040004;
+        public static final int gameStatusButton=0x7f04000b;
+        public static final int game_status=0x7f04000d;
+        public static final int hello_world=0x7f040007;
         public static final int host_title=0x7f040001;
-        public static final int launcher_title=0x7f040008;
-        public static final int startGameButton=0x7f040009;
-        public static final int start_game_button=0x7f040004;
-        public static final int title_activity_about=0x7f04000e;
-        public static final int title_activity_game_status=0x7f04000b;
-        public static final int title_activity_launcher=0x7f040005;
+        public static final int launcher_title=0x7f040009;
+        public static final int name_prompt=0x7f040014;
+        public static final int phone_prompt=0x7f040013;
+        public static final int player1=0x7f040016;
+        public static final int startGameButton=0x7f04000a;
+        public static final int start_game_button=0x7f040005;
+        public static final int status_info_nogame=0x7f040015;
+        public static final int title_activity_about=0x7f04000f;
+        public static final int title_activity_add_user_as_player=0x7f040018;
+        public static final int title_activity_game_status=0x7f04000c;
+        public static final int title_activity_launcher=0x7f040006;
     }
     public static final class style {
         /** 
