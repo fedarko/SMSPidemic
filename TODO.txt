@@ -1,9 +1,6 @@
 TODO
 ====
 
--Figure out Azure nonsense.
-  -Decide between JavaScript or .NET as a backend.
-
 -Easy way = using SMS to send status messages to all players automatically.
 
 -Hard/fancy way = using Azure or something similar to store game session data
@@ -16,3 +13,21 @@ TODO
 
 -Define roles of players more prominently/have explanations in-app. (Separate
  activity, maybe?)
+
+
+
+TODO 2: Hackathon Boogaloo
+==========================
+
+-We have a Twilio account registered to marcus.fedarko@gmail.com.
+
+-We have an OpenShift account registered to marcus.fedarko@gmail.com.
+
+-We have a server set up for Openshift, available in the browser at http://smspi-smspidemiic.rhcloud.com/
+
+-We need to link everything together, and deploy Node.js code to our server.
+
+Our app should store data on our server, and our server should have the functionality available
+to trigger Twilio SMS's to the players' phones.
+
+-Finish contacts - get phone # (imperative) and name (easier, but less important).

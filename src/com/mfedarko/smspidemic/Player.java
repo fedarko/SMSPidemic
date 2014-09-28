@@ -1,3 +1,4 @@
+
 package com.mfedarko.smspidemic;
 
 import java.util.*;
@@ -66,3 +67,4 @@ public class Player {
 		return name+": "+status.toString();
 	}
 }
+
