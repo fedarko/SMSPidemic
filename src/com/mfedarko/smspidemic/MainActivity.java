@@ -14,18 +14,25 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-	private ArrayList<String> player_names = new ArrayList<String>();
-	private ArrayList<String> player_phoneNumbers = new ArrayList<String>();
+	private ArrayList<Player> players = new ArrayList<Player>();
 	
 	private int PICK_CONTACT_REQUEST = 1;
 	
 	private TextView results;
+	
+	// TODO make launchpad activity with options of
+	// "start game" (MainActivity) + "game status" (GameStatusActivity) buttons
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		results = (TextView) findViewById(R.id.contactGetResults);
+		// TODO add user as player: prompt user for his/her name and phone #
+	}
+	
+	public void start_game(View v) {
+		results.setText("Starting game!\n(nothing is happening tho)");
 	}
 	
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -36,28 +43,29 @@ public class MainActivity extends Activity {
 				// 1. Select Phone Number
 				String[] projection = {Phone.NUMBER};
 
-				results.setText("HAPPEN");
-//				Cursor cursor = getContentResolver().query(
-//					contactUri, projection, null, null, null
-//				);
-//				cursor.moveToFirst();
+				Cursor cursor = getContentResolver().query(
+					contactUri, projection, null, null, null
+				);
+				
+				cursor.moveToFirst();
 //
-//				int col = cursor.getColumnIndex(Phone.NUMBER);
-//				String phone_number = cursor.getString(col);
-//				player_phoneNumbers.add(phone_number);
+				int col = cursor.getColumnIndex(Phone.NUMBER);
+				String phone_number = cursor.getString(col);
 				
 				// 2. Select Name
 //				int nameCol = cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME);
 //				String name = cursor.getString(nameCol);
-//				player_names.add(name);
+				
+				Player p = new Player("Bob Example", phone_number);
+				players.add(p);
 			}
 		}
 	}
 	
 	public void contact_lookup(View v) {
-		Intent i = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
+		/** Doesn't actually work yet. So, TODO, do that if time allows, I guess. */
+		Intent i = new Intent(Intent.ACTION_PICK, Uri.parse("content://contacts"));
+		i.setType(Phone.CONTENT_TYPE);
 		startActivityForResult(i, PICK_CONTACT_REQUEST);
-		if (!(player_phoneNumbers.isEmpty()))
-			results.setText(player_phoneNumbers.get(0));
 	}
 }

@@ -23,7 +23,11 @@ public class LauncherActivity extends Activity {
 	
 	public void goToGameStatus(View v) {
 		Intent i = new Intent(getApplicationContext(), GameStatusActivity.class);
+		startActivity(i);	
+	}
+	
+	public void goToAboutScreen(View v) {
+		Intent i = new Intent(getApplicationContext(), AboutActivity.class);
 		startActivity(i);
-		
 	}
 }
