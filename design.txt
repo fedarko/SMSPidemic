@@ -58,4 +58,6 @@ Other Rules
 ===========
 
 If a player turns their phone off, they automatically die. This is a workaround,
-but it's a workaround that's probably justified - 
+but it's a workaround that's probably justified, considering the time limitations
+and scope of this project.
+

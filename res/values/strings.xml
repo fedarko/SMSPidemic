@@ -13,6 +13,10 @@
     <string name="startGameButton">Start a Game</string>
     <string name="gameStatusButton">Game Status</string>
     <string name="title_activity_game_status">SMSpidemic</string>
-	<string name="game_status">Current Game Status</string>
-    
+    <string name="game_status">Current Game Status</string>
+    <string name="aboutButton">About the Game</string>
+    <string name="title_activity_about">SMSpidemic</string>
+	<string name="about_title">About SMSpidemic</string>
+	<string name="about_text">[insert game rules/people types here]</string>
+	
 </resources>
