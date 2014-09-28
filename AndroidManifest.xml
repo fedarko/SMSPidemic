@@ -47,6 +47,10 @@
             android:name=".AboutActivity"
             android:label="@string/title_activity_about" >
         </activity>
+        <activity
+            android:name=".AddUserAsPlayerActivity"
+            android:label="@string/title_activity_add_user_as_player" >
+        </activity>
     </application>
 
 </manifest>

@@ -3,8 +3,8 @@
 
     <string name="app_name">SMSpidemic</string>
     <string name="host_title">Start an Epidemic</string>
-    <string name="contact_lookup_prompt">Add a Player: </string>
-    <string name="contact_lookup_button">Search Contacts</string>
+    <string name="contact_lookup_prompt">Add Players: </string>
+    <string name="contact_lookup_button">Add Contact</string>
     <string name="start_game_button">Start Game</string>
     <string name="title_activity_launcher">SMSpidemic</string>
     <string name="hello_world">Hello world!</string>
@@ -16,7 +16,42 @@
     <string name="game_status">Current Game Status</string>
     <string name="aboutButton">About the Game</string>
     <string name="title_activity_about">SMSpidemic</string>
-	<string name="about_title">About SMSpidemic</string>
-	<string name="about_text">[insert game rules/people types here]</string>
-	
+    <string name="about_title">About SMSpidemic</string>
+    <string name="add_user_button">Add Yourself</string>
+    <string name="addUserTitle">Add Yourself</string>
+    <string name="phone_prompt">Your Phone Number: </string>
+    <string name="name_prompt">Your Name: </string>
+    <string name="about_text"><b>Player Types</b>     	\n\n\t<u>Doctors</u>\n*About <b>30
+        percent</b> of players are assigned initially to this class.\n
+        *High resistance to disease\n
+        *Upon contact with an incubating player, the player reverts to neutral.
+        
+        \n\n\t<u>Bio-Warrior</u>\n*<b>Only one</b> player per game is assigned to this
+        class.
+        \n*Infected at the start; goal is to infect as many people as possible
+        \n*Upon contact with a neutral player, the player becomes incubating.
+        
+        \n\n\t<u>Incubating</u>\n*About <b>20 percent</b> of players are assigned initially to
+        this class.
+        \n*If two days pass since incubation time without being cured by a doctor,
+        the player becomes infected.
+        
+        \n\n\t<u>Infected</u>\n*<b>No players</b> are assigned initially to
+        this class.
+        \n*If one day passes since infection time without being cured by a doctor,
+        the player becomes dead.
+        
+        \n\n\t<u>Dead</u>\n*<b>No players</b> are assigned initially to this class.
+        \n*\"Dead\" players get game-end notifications. They are still technically
+        \"in the game\", even if they are inactive - they\'ll have to wait until the
+        week is up to play again.
+        
+        \n\n\t<b>Rules</b>         \n\n\tIf a player turns their phone off during the week, they automatically
+        become dead. This is a blatant workaround; for now, remember that you always
+        have to be alert in the middle of an epidemic!
+        \n\n\tThere are no rules.
+        \n\n\tThis probably isn\'t going to end up working. It was still a nice idea,
+        anyway.</string>
+    <string name="title_activity_add_user_as_player">SMSpidemic</string>
+
 </resources>
