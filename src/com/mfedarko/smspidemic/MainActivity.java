@@ -18,6 +18,7 @@ public class MainActivity extends Activity {
 	private String playerNames="";
 	private int PICK_CONTACT_REQUEST = 1;
 	
+	private boolean classesAssigned = false;
 	private TextView results;
 	private long startTime;
 	
@@ -38,7 +39,15 @@ public class MainActivity extends Activity {
 	
 	//starts the game. All players are assigned roles
 	public void start_game(View v) {
-		
+		if (classesAssigned) {
+			Toast t = Toast.makeText(
+					getApplicationContext(),
+					"The game has already been started.", 
+					Toast.LENGTH_LONG
+				);
+			t.show();
+			return;
+		}
 		if(players.size()<10){
 			Toast t = Toast.makeText(
 					getApplicationContext(),
@@ -53,6 +62,7 @@ public class MainActivity extends Activity {
 		//remove player button
 		//Should there be a new activity from here?
 		Game g = new Game(players);
+		classesAssigned = true;
 		for(Player p: players){
 			results.setText(text+=p+"\n");
 		}
