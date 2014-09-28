@@ -6,15 +6,10 @@ TODO
 -Hard/fancy way = using Azure or something similar to store game session data
  on a server.
 
--Finish Contacts selection. It should show selected contacts to user in a
- readable format on the "Start Game" page.
-
 -Ensure that only one game is running at a time.
 
--Define roles of players more prominently/have explanations in-app. (Separate
- activity, maybe?)
-
-
+-Add "add user as player" thing - add another button directing to the page from
+ MainActivity.
 
 TODO 2: Hackathon Boogaloo
 ==========================
@@ -29,5 +24,3 @@ TODO 2: Hackathon Boogaloo
 
 Our app should store data on our server, and our server should have the functionality available
 to trigger Twilio SMS's to the players' phones.
-
--Finish contacts - get phone # (imperative) and name (easier, but less important).

@@ -1,0 +1,4 @@
+Domain Namespace: smspidemiic (an extra i was automatically added???)
+App Name: smspi
++1 240-547-0233
+Use "rhc logout" to delete the no-password SSH token.
