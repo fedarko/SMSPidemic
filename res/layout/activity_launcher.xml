@@ -1,0 +1,41 @@
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+	
+	    <TextView
+	        android:id="@+id/launcherTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:text="@string/launcher_title"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textColor="#33AF5A" />
+	
+	    <Button
+	        android:id="@+id/startGameButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/launcherTitle"
+	        android:layout_marginTop="15dp"
+	        android:text="@string/startGameButton"
+	        android:onClick="goToStartGame" />
+	
+	    <Button
+	        android:id="@+id/gameStatusButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/startGameButton"
+	        android:layout_alignBottom="@+id/startGameButton"
+	        android:layout_alignParentRight="true"
+	        android:text="@string/gameStatusButton"
+	        android:onClick="goToGameStatus" />
+	
+	</RelativeLayout>
+</ScrollView>

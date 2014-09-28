@@ -54,3 +54,8 @@ Min Players: 5
 4) Over the course of the week (7 days or 168 hours since the host started the
    game), people can communicate like normal via SMS.
 
+Other Rules
+===========
+
+If a player turns their phone off, they automatically die. This is a workaround,
+but it's a workaround that's probably justified - 
