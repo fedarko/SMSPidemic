@@ -21,7 +21,8 @@
     <string name="addUserTitle">Add Yourself</string>
     <string name="phone_prompt">Your Phone Number: </string>
     <string name="name_prompt">Your Name: </string>
-    <string name="about_text"><b>Player Types</b>     	\n\n\t<u>Doctors</u>\n*About <b>30
+    <string name="status_info_nogame">No current game.</string>
+    <string name="about_text">\t<b>Player Types</b>     	\n\n\t<u>Doctors</u>\n*About <b>30
         percent</b> of players are assigned initially to this class.\n
         *High resistance to disease\n
         *Upon contact with an incubating player, the player reverts to neutral.
@@ -42,15 +43,15 @@
         the player becomes dead.
         
         \n\n\t<u>Dead</u>\n*<b>No players</b> are assigned initially to this class.
-        \n*\"Dead\" players get game-end notifications. They are still technically
+        \n*Dead players get game-end notifications. They are still technically
         \"in the game\", even if they are inactive - they\'ll have to wait until the
         week is up to play again.
         
-        \n\n\t<b>Rules</b>         \n\n\tIf a player turns their phone off during the week, they automatically
+        \n\n\t<b>Rules</b>\n\n*RULE 1: If a player turns their phone off during the week, they automatically
         become dead. This is a blatant workaround; for now, remember that you always
-        have to be alert in the middle of an epidemic!
-        \n\n\tThere are no rules.
-        \n\n\tThis probably isn\'t going to end up working. It was still a nice idea,
+        have to be alert in the middle of an epidemic! Or something like that.
+        \n\n*RULE 2: There are no rules.
+        \n\n*RULE 3: This probably isn\'t going to end up working. It was still a nice idea,
         anyway.</string>
     <string name="title_activity_add_user_as_player">SMSpidemic</string>
 

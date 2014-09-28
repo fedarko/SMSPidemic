@@ -12,8 +12,8 @@ public class GameStatusActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
 		setContentView(R.layout.activity_game_status);
+		
 		gameStatus = (TextView) findViewById(R.id.StatusInfo);
 		Game g = MainActivity.game1(); 
 		String s="";
@@ -28,6 +28,8 @@ public class GameStatusActivity extends Activity {
 			s+=MainActivity.players.get(i)+": "+text+"\n\n";
 		}
 		
+		if (MainActivity.players.size() == 0)
+			s = getString(R.string.status_info_nogame);
 		gameStatus.setText(s);
 	}
 

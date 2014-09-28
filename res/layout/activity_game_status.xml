@@ -23,7 +23,7 @@
 	        android:layout_below="@+id/GameStatusTitle"
 	        android:layout_marginTop="10dp"
 	        android:layout_alignParentLeft="true"
-	        android:text="You have been eaten by a grue." />
+	        android:text="" />
 	    	
 	</RelativeLayout>
 </ScrollView>

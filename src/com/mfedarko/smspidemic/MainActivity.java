@@ -26,8 +26,6 @@ public class MainActivity extends Activity {
 		startTime=System.currentTimeMillis();
 		
 	}
-	// TODO make launchpad activity with options of
-	// "start game" (MainActivity) + "game status" (GameStatusActivity) buttons
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -114,15 +112,13 @@ public class MainActivity extends Activity {
 						Toast t = Toast.makeText(
 							getApplicationContext(),
 							"ERROR: Duplicate detected.", 
-							Toast.LENGTH_LONG
+							Toast.LENGTH_SHORT
 						);
 						t.show();
 						return;
 					}
 				}
 				// 2. Select Name
-//				int nameCol = cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME);
-//				String name = cursor.getString(nameCol);
 				
 				Player p = new Player(name, phone_number);
 				players.add(p);
@@ -133,7 +129,7 @@ public class MainActivity extends Activity {
 						String.format("Player %d of 16 added.",
 							players.size()
 						), 
-						Toast.LENGTH_LONG
+						Toast.LENGTH_SHORT
 					);
 					t.show();
 			//	System.out.println(p.getName()+":DELETE PHONE LATER:::"+p.getPhone());
@@ -143,7 +139,6 @@ public class MainActivity extends Activity {
 	}
 	
 	public void contact_lookup(View v) {
-		/** Doesn't actually work yet. So, TODO, do that if time allows, I guess. */
 		Intent i = new Intent(Intent.ACTION_PICK, Uri.parse("content://contacts"));
 		i.setType(Phone.CONTENT_TYPE);
 		startActivityForResult(i, PICK_CONTACT_REQUEST);		
